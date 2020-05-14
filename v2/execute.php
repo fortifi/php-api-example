@@ -24,7 +24,8 @@ $api->setConnection($connection)->setAccessGrant(new ServiceAccountGrant(API_USE
 
 try
 {
-  $result = $api->brands()->all();
+  $result = $api->brands();
+
   echo $result->wasSuccessful() ? "SUCCESS" : "FAILED";
   echo ' | Status Code: ' . $result->getRawResult()->getStatusCode() . PHP_EOL;
   print_r($result->getDecodedResponse());

@@ -1,0 +1,10 @@
+{
+  "name": "fortifi/php-api-example",
+  "license": "MIT",
+  "description": "Example of how to use the fortifi PHP API",
+  "minimum-stability": "stable",
+  "require": {
+    "fortifi/php-api": "~2.0",
+    "rmccue/requests": ">=1.0"
+  }
+}
