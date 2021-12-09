@@ -5,6 +5,6 @@
     "minimum-stability": "stable",
     "require": {
         "fortifi/php-api": "~3.0",
-        "rmccue/requests": ">=1.0"
+        "rmccue/requests": "~1.0"
     }
 }
