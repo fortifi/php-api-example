@@ -31,7 +31,7 @@ $api->setConnection($connection)->setAccessGrant(new ServiceAccountGrant(API_USE
 try
 {
   $result = $api->brands()->all();
-  var_dump([
+  var_export([
     $result->wasSuccessful() ? "SUCCESS" : "FAILED",
     $result->getRawResult()->getStatusCode(),
     $result->getDecodedResponse(),
@@ -39,5 +39,5 @@ try
 }
 catch(\Exception $e)
 {
-  var_dump([$e->getCode(), $e->getMessage()]);
+  var_export([$e->getCode(), $e->getMessage()]);
 }
