@@ -1,8 +1,9 @@
 <?php
 namespace Example;
 
-use Fortifi\Api\Core\Connections\RequestsConnection;
+use Fortifi\Api\Core\Connections\Requests2Connection;
 use Fortifi\Api\Core\OAuth\Grants\ServiceAccountGrant;
+use Fortifi\Api\V1\Definitions\FortifiApiDefinition;
 use Fortifi\Api\V1\Endpoints\FortifiApi;
 
 require_once 'vendor/autoload.php';
@@ -16,20 +17,27 @@ const ORG_FID = 'ORG:XY:1234:abcde'; //Organisation FID
 const API_USER = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 const API_KEY = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 
-$connection = new RequestsConnection();
+$connection = new Requests2Connection();
 $connection->setOrganisationFid(ORG_FID);
 
 $api = new FortifiApi();
+$def = $api->getApiDefinition();
+if($def instanceof FortifiApiDefinition)
+{
+  $def->setHost('api.fortifi.me');
+}
 $api->setConnection($connection)->setAccessGrant(new ServiceAccountGrant(API_USER, API_KEY));
 
 try
 {
   $result = $api->brands()->all();
-  echo $result->wasSuccessful() ? "SUCCESS" : "FAILED";
-  echo ' | Status Code: ' . $result->getRawResult()->getStatusCode() . PHP_EOL;
-  print_r($result->getDecodedResponse());
+  var_dump([
+    $result->wasSuccessful() ? "SUCCESS" : "FAILED",
+    $result->getRawResult()->getStatusCode(),
+    $result->getDecodedResponse(),
+  ]);
 }
 catch(\Exception $e)
 {
-  echo $e->getMessage() . PHP_EOL;
+  var_dump([$e->getCode(), $e->getMessage()]);
 }
