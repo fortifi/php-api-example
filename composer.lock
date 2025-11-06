@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "fortifi/api",
-            "version": "1.4.0",
+            "version": "1.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/fortifi/api.git",
-                "reference": "6925d5a23b174ea0b19fd08d2a17f5e30296be3d"
+                "reference": "2537b43d471d84789301c919462909afd061ca68"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fortifi/api/zipball/6925d5a23b174ea0b19fd08d2a17f5e30296be3d",
-                "reference": "6925d5a23b174ea0b19fd08d2a17f5e30296be3d",
+                "url": "https://api.github.com/repos/fortifi/api/zipball/2537b43d471d84789301c919462909afd061ca68",
+                "reference": "2537b43d471d84789301c919462909afd061ca68",
                 "shasum": ""
             },
             "require": {
@@ -40,22 +40,22 @@
             "homepage": "http://fortifi.co",
             "support": {
                 "issues": "https://github.com/fortifi/api/issues",
-                "source": "https://github.com/fortifi/api/tree/1.5.0"
+                "source": "https://github.com/fortifi/api/tree/1.4.1"
             },
-            "time": "2023-06-02T10:32:29+00:00"
+            "time": "2025-11-06T11:04:58+00:00"
         },
         {
             "name": "fortifi/php-api",
-            "version": "3.165.0",
+            "version": "3.171.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/fortifi/php-api.git",
-                "reference": "65cbe47d3e6fc500a4ac127925fe5dacda285ce9"
+                "reference": "f5d3ff0c55b1d558bab9b824fe829e9ec9a8e4e7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fortifi/php-api/zipball/65cbe47d3e6fc500a4ac127925fe5dacda285ce9",
-                "reference": "65cbe47d3e6fc500a4ac127925fe5dacda285ce9",
+                "url": "https://api.github.com/repos/fortifi/php-api/zipball/f5d3ff0c55b1d558bab9b824fe829e9ec9a8e4e7",
+                "reference": "f5d3ff0c55b1d558bab9b824fe829e9ec9a8e4e7",
                 "shasum": ""
             },
             "require": {
@@ -72,9 +72,9 @@
             "description": "Fortifi Business Platform",
             "homepage": "http://fortifi.io",
             "support": {
-                "source": "https://github.com/fortifi/php-api/tree/3.165.0"
+                "source": "https://github.com/fortifi/php-api/tree/3.171.0"
             },
-            "time": "2025-08-12T10:21:47+00:00"
+            "time": "2025-10-21T11:21:48+00:00"
         },
         {
             "name": "packaged/helpers",
